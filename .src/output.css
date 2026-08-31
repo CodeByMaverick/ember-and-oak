@@ -20,9 +20,6 @@
     --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-cream: #FAF7F2;
-    --color-espresso: #2C1810;
-    --color-terracotta: #C4622D;
   }
 }
 @layer base {
@@ -186,17 +183,36 @@
   .z-50 {
     z-index: 50;
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
   .w-full {
     width: 100%;
+  }
+  .max-w-7xl {
+    max-width: var(--container-7xl);
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
   }
   .justify-between {
     justify-content: space-between;
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
@@ -219,30 +235,43 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .text-\[\#C21810\] {
-    color: #C21810;
+  .text-\[\#ff0000\] {
+    color: #ff0000;
   }
-  .text-\[\#FAF7F2\] {
-    color: #FAF7F2;
+  .text-orange-500 {
+    color: var(--color-orange-500);
   }
-  .text-cream {
-    color: var(--color-cream);
+  .text-red-500 {
+    color: var(--color-red-500);
   }
-  .text-espresso {
-    color: var(--color-espresso);
+  .underline {
+    text-decoration-line: underline;
   }
-  .text-terracotta {
-    color: var(--color-terracotta);
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
     }
   }
 }
