@@ -14,55 +14,63 @@
 
         <div class="flex item-center justify-between px-8 py-5">
 
-            <a href="#" class="font-serif text-2xl font-bold text-[#FAF7F2]">
+            <a href="#" class="font-serif text-2xl font-bold text-cream">
                 <span>Ember</span>
-                <span class="text-[#C21810]">& Oak</span>
+                <span class="text-terracotta">& Oak</span>
             </a>
-            <div class="flex gap-8">
-                <a href="#menu">Menu</a>
-                <a href="#about">About</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#reserve">Reserve</a>
+            <div class="flex item-center gap-8">
+                <a href="#menu" class="text-cream">Menu</a>
+                <a href="#about" class="text-cream">About</a>
+                <a href="#gallery" class="text-cream">Gallery</a>
+                <a href="#reserve" class="text-cream">Reserve</a>
             </div>
-            <button>
+
+            <a 
+            href="#reserve"
+            class="border border-cream px-5 py-2 text-sm uppercase tracking-wider text-cream"
+            >
                 Reserve a Table
-            </button>
+            </a>
 
         </div>
 
     </nav>
 
-    <section id="hero">
+    <section id="hero" class="relative min-h-screen">
 
-        <img src="hero.jpg" alt="Ember & Oak restaurant interior">
+        <img src="assets/ember&oak-bcg.jpg" alt="Ember & Oak restaurant interior"
+            class="absolute inset-0 w-full h-full object-cover">
 
-        <div class="hero-overlay"></div>
+        <div class="absolute inset-0 bg-black/50"></div>
 
-        <div class="hero-content">
+        <div class="relative z-10 min-h-screen flex item-center justify-between px-8">
 
-            <p class="hero-label">Ember & Oak</p>
+            <div class="text-center text-cream max-w-4xl">
 
-            <p class="hero-meta">Est. 2018 • New Delhi</p>
+                <!--<p class="hero-label">Ember & Oak</p>
 
-            <h1>
-                Where Every Meal
-                Tells a Story.
-            </h1>
+                <p class="text-sm tracking-[0.3em uppercase]">Est. 2018 • New Delhi</p>
 
-            <p class="hero-description">
-                Handcrafted dishes, seasonal ingredients,
-                and an atmosphere worth savouring.
-            </p>
+                <h1>
+                    Where Every Meal
+                    Tells a Story.
+                </h1>
 
-            <div class="hero-buttons">
-                <a href="#reserve">Reserve a Table</a>
-                <a href="#menu">View Menu</a>
+                <p class="hero-description">
+                    Handcrafted dishes, seasonal ingredients,
+                    and an atmosphere worth savouring.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#reserve">Reserve a Table</a>
+                    <a href="#menu">View Menu</a>
+                </div>-->
+
+                <div class="scroll-indicator">
+                    <span></span>
+                </div>
+
             </div>
-
-            <div class="scroll-indicator">
-                <span></span>
-            </div>
-
         </div>
     </section>
 

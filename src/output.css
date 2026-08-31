@@ -11,13 +11,18 @@
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-orange-500: oklch(70.5% 0.213 47.604);
+    --color-black: #000;
     --spacing: 0.25rem;
+    --container-4xl: 56rem;
     --container-7xl: 80rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-bold: 700;
+    --tracking-wider: 0.05em;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-cream: #FAF7F2;
@@ -174,8 +179,17 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .fixed {
     position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .inset-0 {
+    inset: 0px;
   }
   .top-0 {
     top: 0px;
@@ -183,14 +197,26 @@
   .left-0 {
     left: 0px;
   }
+  .z-10 {
+    z-index: 10;
+  }
   .z-50 {
     z-index: 50;
   }
   .flex {
     display: flex;
   }
+  .h-full {
+    height: 100%;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
   .w-full {
     width: 100%;
+  }
+  .max-w-4xl {
+    max-width: var(--container-4xl);
   }
   .justify-between {
     justify-content: space-between;
@@ -198,11 +224,36 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-cream {
+    border-color: var(--color-cream);
+  }
+  .bg-black\/50 {
+    background-color: color-mix(in srgb, #000 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    }
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+  .text-center {
+    text-align: center;
   }
   .font-serif {
     font-family: var(--font-serif);
@@ -215,9 +266,17 @@
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
   }
   .text-\[\#C21810\] {
     color: #C21810;
@@ -234,15 +293,29 @@
   .text-terracotta {
     color: var(--color-terracotta);
   }
+  .uppercase {
+    text-transform: uppercase;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-tracking: initial;
     }
   }
 }
