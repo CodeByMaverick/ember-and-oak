@@ -295,6 +295,9 @@
   .max-w-xl {
     max-width: var(--container-xl);
   }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
   .translate-y-6 {
     --tw-translate-y: calc(var(--spacing) * 6);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -436,6 +439,9 @@
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
+  }
+  .py-9 {
+    padding-block: calc(var(--spacing) * 9);
   }
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
