@@ -277,6 +277,15 @@
   .inline-block {
     display: inline-block;
   }
+  .h-72 {
+    height: calc(var(--spacing) * 72);
+  }
+  .h-\[380px\] {
+    height: 380px;
+  }
+  .h-\[520px\] {
+    height: 520px;
+  }
   .h-\[580px\] {
     height: 580px;
   }
@@ -323,8 +332,17 @@
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .grid-cols-\[45\%_25\%_30\%\] {
+    grid-template-columns: 45% 25% 30%;
+  }
+  .grid-cols-\[45\%_25\%_35\%\] {
+    grid-template-columns: 45% 25% 35%;
   }
   .flex-col {
     flex-direction: column;
@@ -341,6 +359,9 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
@@ -352,6 +373,14 @@
   }
   .gap-16 {
     gap: calc(var(--spacing) * 16);
+  }
+  :where(.space-y-3 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded-sm {
     border-radius: var(--radius-sm);
@@ -439,6 +468,9 @@
   }
   .object-bottom {
     object-position: bottom;
+  }
+  .object-center {
+    object-position: center;
   }
   .p-7 {
     padding: calc(var(--spacing) * 7);
@@ -771,6 +803,11 @@
   inherits: false;
   initial-value: 0;
 }
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -916,6 +953,7 @@
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
