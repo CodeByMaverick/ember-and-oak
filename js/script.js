@@ -8,7 +8,6 @@ window.addEventListener("scroll", () => {
     const aboutTop = aboutSection.offsetTop;
 
     if (window.scrollY >= aboutTop - 80){
-        //navbar.classList.add("bg-cream");
 
         logoEmber.classList.remove("text-cream");
         logoEmber.classList.add("text-espresso");
@@ -22,7 +21,6 @@ window.addEventListener("scroll", () => {
     }
 
     else {
-        //navbar.classList.remove("bg-cream");
 
         logoEmber.classList.remove("text-espresso");
         logoEmber.classList.add("text-cream");

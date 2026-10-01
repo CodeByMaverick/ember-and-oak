@@ -433,6 +433,9 @@
       border-color: color-mix(in oklab, var(--color-warmgray) 40%, transparent);
     }
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
   .bg-black\/50 {
     background-color: color-mix(in srgb, #000 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -595,6 +598,10 @@
   .tracking-\[0\.15em\] {
     --tw-tracking: 0.15em;
     letter-spacing: 0.15em;
+  }
+  .tracking-\[3em\] {
+    --tw-tracking: 3em;
+    letter-spacing: 3em;
   }
   .tracking-wider {
     --tw-tracking: var(--tracking-wider);
