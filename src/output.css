@@ -759,8 +759,19 @@
         border-color: color-mix(in oklab, var(--color-cream) 70%, transparent);
       }
     }
+    .hover\:border-terracotta:hover {
+      border-color: var(--color-terracotta);
+    }
     .hover\:bg-cream:hover {
       background-color: var(--color-cream);
+    }
+    .hover\:bg-terracotta\/20:hover {
+      background-color: color-mix(in srgb, #C4622D 20%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-terracotta\/20:hover {
+        background-color: color-mix(in oklab, var(--color-terracotta) 20%, transparent);
+      }
     }
     .hover\:bg-terracotta\/90:hover {
       background-color: color-mix(in srgb, #C4622D 90%, transparent);
