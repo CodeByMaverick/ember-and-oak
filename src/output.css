@@ -672,6 +672,12 @@
   .text-cream {
     color: var(--color-cream);
   }
+  .text-cream\/30 {
+    color: color-mix(in srgb, #FAF7F2 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-cream) 30%, transparent);
+    }
+  }
   .text-cream\/40 {
     color: color-mix(in srgb, #FAF7F2 40%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
