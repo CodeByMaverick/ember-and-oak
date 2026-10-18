@@ -685,6 +685,57 @@
                                 class="w-full border-0 border-b border-cream/25 bg-transparent py-3 text-cream placeholder:text-cream/30 focus:border-terracotta focus:outline-none">
                         </div>
 
+                        <div>
+                            <label for="date" class="mb-2 block text-xs uppercase tracking-[0.2em] text-cream/50">
+                                Date
+                            </label>
+
+                            <input type="date" id="date" name="date" required
+                                class="w-full border-0 border-b border-cream/25 bg-transparent py-3 text-cream focus:border-terracotta focus:outline-none">
+                        </div>
+
+                        <div>
+                            <label for="time" class="mb-2 block text-xs uppercase tracking-[0.2em] text-cream/50">
+                                Time
+                            </label>
+
+                            <select name="time" id="time" required
+                                class="w-full border-0 border-b border-cream/25 bg-transparent py-3 text-cream focus:border-terracotta focus:outline-none">
+
+                                <option value="" disabled selected class="bg-espresso text-cream">
+                                    Select a time
+                                </option>
+                                
+                                <option value="5:00 PM" class="bg-espresso text-cream">5:00 PM</option>
+                                <option value="6:00 PM" class="bg-espresso text-cream">6:00 PM</option>
+                                <option value="7:00 PM" class="bg-espresso text-cream">7:00 PM</option>
+                                <option value="8:00 PM" class="bg-espresso text-cream">8:00 PM</option>
+                                <option value="9:00 PM" class="bg-espresso text-cream">9:00 PM</option>
+                                <option value="10:00 PM" class="bg-espresso text-cream">10:00 PM</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="guests" class="mb-2 block text-xs uppercase tracking-[0.2em] text-cream/50">
+                                Guests
+                            </label>
+
+                            <select name="guests" id="guests" required
+                                class="w-full border-0 border-b border-cream/25 bg-transparent py-3 text-cream focus:border-terracotta focus:outline-none">
+
+                                <option value="" disabled selected class="bg-espresso text-cream">
+                                    Select guests
+                                </option>
+                                
+                                <option value="1" class="bg-espresso text-cream">1 Guest</option>
+                                <option value="2" class="bg-espresso text-cream">2 Guest</option>
+                                <option value="3" class="bg-espresso text-cream">3 Guest</option>
+                                <option value="4" class="bg-espresso text-cream">4 Guest</option>
+                                <option value="5" class="bg-espresso text-cream">5 Guest</option>
+                                <option value="6+" class="bg-espresso text-cream">6+ Guest</option>
+                            </select>
+                        </div>
+
                     </form>
 
                 </div>
