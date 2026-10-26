@@ -2,12 +2,32 @@ const navbar = document.getElementById("navbar");
 const logoEmber = document.getElementById("logo-ember");
 const navLinks = document.querySelectorAll("#nav-links a");
 const reserveButton = document.getElementById("reserve-button");
+
 const aboutSection = document.getElementById("about");
+const menuSection = document.getElementById("menu");
+const gallerySection = document.getElementById("gallery");
+const testimonialsSection = document.getElementById("testimonials");
+const reserveSection = document.getElementById("reserve");
 
 window.addEventListener("scroll", () => {
     const aboutTop = aboutSection.offsetTop;
+    const menuTop = menuSection.offsetTop;
+    const galleryTop = gallerySection.offsetTop;
+    const testimonialsTop = testimonialsSection.offsetTop;
+    const reserveTop = reserveSection.offsetTop;
 
-    if (window.scrollY >= aboutTop - 80){
+    console.log({
+        scrollY: window.scrollY,
+        aboutTop,
+        menuTop,
+        galleryTop,
+        reserveTop
+    });
+
+    if (
+        (window.scrollY >= aboutTop - 80 && window.scrollY < menuTop - 80) ||
+        (window.scrollY >= galleryTop - 80 && window.scrollY < reserveTop - 80)
+    ) {
 
         logoEmber.classList.remove("text-cream");
         logoEmber.classList.add("text-espresso");
@@ -29,7 +49,7 @@ window.addEventListener("scroll", () => {
             link.classList.remove("text-espresso/70");
             link.classList.add("text-cream");
         });
-        reserveButton.classList.remove("border-terracotta");
-        reserveButton.classList.add("border-cream");
+        reserveButton.classList.remove("border-terracotta", "bg-terracotta");
+        reserveButton.classList.add("border-cream", "bg-transparent");
     }
 });
