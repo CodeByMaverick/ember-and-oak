@@ -905,6 +905,11 @@
     --tw-outline-style: none;
     outline-style: none;
   }
+  @media (width >= 40rem) {
+    .sm\:text-left {
+      text-align: left;
+    }
+  }
   @media (width >= 48rem) {
     .md\:h-\[580px\] {
       height: 580px;
