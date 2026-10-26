@@ -849,8 +849,16 @@
     }
   }
   @media (hover: hover) {
+    .hover\:translate-y-0\.5:hover {
+      --tw-translate-y: calc(var(--spacing) * 0.5);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
     .hover\:translate-y-1:hover {
       --tw-translate-y: var(--spacing);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+    .hover\:translate-y-10:hover {
+      --tw-translate-y: calc(var(--spacing) * 10);
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
     .hover\:border-cream\/40:hover {
