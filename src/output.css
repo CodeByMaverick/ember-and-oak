@@ -388,6 +388,9 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
+  }
   .gap-16 {
     gap: calc(var(--spacing) * 16);
   }
@@ -470,6 +473,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-warmgray) 40%, transparent);
     }
+  }
+  .bg-\[\#1C100C\] {
+    background-color: #1C100C;
   }
   .bg-black\/50 {
     background-color: color-mix(in srgb, #000 50%, transparent);
@@ -560,6 +566,9 @@
   }
   .py-9 {
     padding-block: calc(var(--spacing) * 9);
+  }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
   }
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
@@ -891,8 +900,14 @@
     .md\:items-center {
       align-items: center;
     }
+    .md\:gap-10 {
+      gap: calc(var(--spacing) * 10);
+    }
     .md\:p-10 {
       padding: calc(var(--spacing) * 10);
+    }
+    .md\:py-24 {
+      padding-block: calc(var(--spacing) * 24);
     }
     .md\:text-5xl {
       font-size: var(--text-5xl);
