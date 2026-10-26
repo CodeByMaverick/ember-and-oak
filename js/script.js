@@ -16,14 +16,6 @@ window.addEventListener("scroll", () => {
     const testimonialsTop = testimonialsSection.offsetTop;
     const reserveTop = reserveSection.offsetTop;
 
-    console.log({
-        scrollY: window.scrollY,
-        aboutTop,
-        menuTop,
-        galleryTop,
-        reserveTop
-    });
-
     if (
         (window.scrollY >= aboutTop - 80 && window.scrollY < menuTop - 80) ||
         (window.scrollY >= galleryTop - 80 && window.scrollY < reserveTop - 80)
