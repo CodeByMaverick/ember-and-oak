@@ -36,7 +36,7 @@ window.addEventListener("scroll", () => {
             link.classList.remove("text-cream");
             link.classList.add("text-espresso/70");
         });
-        reserveButton.classList.remove("border-cream", "bg-transparent");
+        reserveButton.classList.remove("border-cream");
         reserveButton.classList.add("border-terracotta", "bg-terracotta");
     }
 
@@ -49,7 +49,7 @@ window.addEventListener("scroll", () => {
             link.classList.remove("text-espresso/70");
             link.classList.add("text-cream");
         });
-        reserveButton.classList.remove("border-terracotta", "bg-terracotta");
-        reserveButton.classList.add("border-cream", "bg-transparent");
+        reserveButton.classList.remove("border-terracotta");
+        reserveButton.classList.add("border-cream");
     }
 });
