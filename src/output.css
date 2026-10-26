@@ -370,6 +370,9 @@
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -703,6 +706,12 @@
     color: color-mix(in srgb, #FAF7F2 50%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       color: color-mix(in oklab, var(--color-cream) 50%, transparent);
+    }
+  }
+  .text-cream\/55 {
+    color: color-mix(in srgb, #FAF7F2 55%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-cream) 55%, transparent);
     }
   }
   .text-cream\/65 {
