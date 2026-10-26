@@ -45,3 +45,27 @@ window.addEventListener("scroll", () => {
         reserveButton.classList.add("border-cream");
     }
 });
+
+
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+const mobileMenu = document.getElementById("mobile-menu")
+
+mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+
+    const isOpen = !mobileMenu.classList.contains("hidden");
+
+    mobileMenuButton.setAttribute("aria-expanded", isOpen);
+    mobileMenuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+});
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+        mobileMenuButton.setAttribute("aria-label", "Open navigation menu");
+    });
+});
