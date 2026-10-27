@@ -52,7 +52,7 @@ This project helped me understand how small layout and styling decisions can mak
 
 ## Live Demo
 
-[View Live Website](ember-and-oak-kohl.vercel.app)
+https://ember-and-oak-kohl.vercel.app/
 
 
 ## Future Improvements
