@@ -38,16 +38,16 @@ This project helped me understand how small layout and styling decisions can mak
 ## Preview
 
 ### Hero Section
-<!-- Add your hero screenshot here -->
+![Hero-preview](assets/ember&oak-hero.png)
 
 ### Menu Section
-<!-- Add your menu screenshot here -->
+![Menu-preview](assets/ember&oak-menu.png)
 
 ### Gallery
-<!-- Add your gallery screenshot here -->
+![Gallery-preview](assets/ember&oak-gallery.png)
 
 ### Mobile View
-<!-- Add your mobile screenshot here -->
+![Mobile-preview](assets/ember&oak-mobile.png)
 
 
 ## Live Demo
